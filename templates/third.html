@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block title %} My third Page {% endblock %}
+{% block content %}
+    <h1>Third Page extends first page with a common navbar </h1>
+    <h1>{{var}}</h1>
+    <h2>{{msg}}</h2>
+    <ul>
+        {% for eachfruit in  myfruits %}
+        <li>{{eachfruit}}</li>
+        {% endfor %}
+    </ul>
+git{% endblock %}
