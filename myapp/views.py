@@ -27,10 +27,17 @@ def mythirdpage(request):
     var = 'hello, world!'
     greeting = 'Hello How are you...?'
     fruits = ['apple', 'banana', 'mango']
+    num1, num2 = 3, 5
+    ans = num1 > num2
+    print(ans)
+    
     mydictionary = {
                "var":var,
                "msg": greeting,
-               "myfruits" : fruits
+               "myfruits" : fruits,
+               "num1":num1,
+               "num2":num2,
+               "ans":ans
     }
     return render(request, 'third.html', context=mydictionary)
 
