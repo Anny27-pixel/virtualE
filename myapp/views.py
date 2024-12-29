@@ -27,7 +27,7 @@ def mythirdpage(request):
     var = 'hello, world!'
     greeting = 'Hello How are you...?'
     fruits = ['apple', 'banana', 'mango']
-    num1, num2 = 3, 5
+    num1, num2 = 16, 15
     ans = num1 > num2
     print(ans)
     
@@ -40,4 +40,7 @@ def mythirdpage(request):
                "ans":ans
     }
     return render(request, 'third.html', context=mydictionary)
+
+def myimagepage(request):
+    return render(request,'imagepage.html')
 
