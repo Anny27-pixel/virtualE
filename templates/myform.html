@@ -5,7 +5,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6" style="margin: 0 auto;">
-            <form method="GET" action="{% url 'submitmyform' %}">
+            <!-- <form method="GET" action="{% url 'submitmyform' %}"> -->
+            <form method="POST" action="{% url 'submitmyform' %}">
+                {% csrf_token %} <!-- Required for Django forms -->
                 <div class="form-group">
                     <label for="mytext" style="margin-bottom: 5px;">My Text</label>
                     <input type="text" id="mytext" name="mytext" class="form-control">

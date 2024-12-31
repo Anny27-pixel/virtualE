@@ -64,8 +64,8 @@ def myform(request):
     return render(request, 'myform.html')
 
 def submitmyform(request):
-    mytext = request.GET.get('mytext', None)  # Get 'mytext', default to None if missing
-    mytextarea = request.GET.get('mytextarea', None)  # Get 'mytextarea', default to None if missing
+    mytext = request.POST.get('mytext', None)  # Get 'mytext', default to None if missing
+    mytextarea = request.POST.get('mytextarea', None)  # Get 'mytextarea', default to None if missing
 
     if mytext is None or mytextarea is None:
         return JsonResponse({"status": "error", "message": "Missing form data."}, status=400)
