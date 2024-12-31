@@ -62,3 +62,17 @@ def myimagepage3(request,imagename):
 
 def myform(request):
     return render(request, 'myform.html')
+
+def submitmyform(request):
+    mytext = request.GET.get('mytext', None)  # Get 'mytext', default to None if missing
+    mytextarea = request.GET.get('mytextarea', None)  # Get 'mytextarea', default to None if missing
+
+    if mytext is None or mytextarea is None:
+        return JsonResponse({"status": "error", "message": "Missing form data."}, status=400)
+
+    mydictionary = {
+        "var1": mytext,
+        "var2": mytextarea,
+        "method": request.method
+    }
+    return JsonResponse(mydictionary)

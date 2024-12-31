@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6" style="margin: 0 auto;">
-            <form action="">
+            <form method="GET" action="{% url 'submitmyform' %}">
                 <div class="form-group">
                     <label for="mytext" style="margin-bottom: 5px;">My Text</label>
                     <input type="text" id="mytext" name="mytext" class="form-control">
@@ -14,7 +14,10 @@
                     <label for="mytextarea" style="margin-bottom: 5px;">My Text Area</label>
                     <textarea id="mytextarea" name="mytextarea" class="form-control" rows="3"></textarea>
                 </div>
-            </form>
+                <div class="form-group" style="margin-top: 5px;">
+                    <button type="submit" class="btn btn-primary" style="margin: 0 auto; display: block;">Submit</button>
+                </div>
+            </form>            
         </div>
     </div>
 </div>
