@@ -59,3 +59,6 @@ def myimagepage3(request,imagename):
         "var":var
     }
     return render(request, 'imagepage3.html', context=mydictionary)
+
+def myform(request):
+    return render(request, 'myform.html')
